@@ -19,6 +19,10 @@ const gameServer = new Server({
 gameServer.define('my_school', MySchool);
 app.use('/colyseus', monitor());
 
+app.get("/", (req, res) => {
+              res.send("It's time to kick ass and chew bubblegum!");
+          });
+
 gameServer.listen(gamePort);
 
 // export default Arena({
@@ -36,9 +40,7 @@ gameServer.listen(gamePort);
 //         /**
 //          * Bind your custom express routes here:
 //          */
-//         app.get("/", (req, res) => {
-//             res.send("It's time to kick ass and chew bubblegum!");
-//         });
+//         
 
 //         /**
 //          * Bind @colyseus/monitor
