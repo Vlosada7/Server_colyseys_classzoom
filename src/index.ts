@@ -6,7 +6,7 @@ import { createServer } from 'http';
 import { WebSocketTransport } from '@colyseus/ws-transport';
 import { MySchool } from "./rooms/MySchool";
 
-const gamePort = 4001;
+const gamePort = 2657;
 
 const app = express();
 
@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
               res.send("It's time to kick ass and chew bubblegum!");
           });
 
-gameServer.listen(gamePort);
+gameServer.listen(gamePort, "0.0.0.0");
 
 // export default Arena({
 //     getId: () => "Your Colyseus App",
